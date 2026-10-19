@@ -1,0 +1,34 @@
+{
+  "name": "dsh-loop-guard",
+  "version": "0.5.1",
+  "private": true,
+  "type": "module",
+  "description": "拦住模型的推理循环与流卡死：检测到「只出推理、不出文本」的死循环（分片洪水）、「一个分片都不吐」的卡死（零分片空档）、「分片慢慢来但一直不出东西」的渗流（零产出超时）、「同一小段文本在流里反复重复」的输出退化（思考里尤其常见）就提前掐断本次尝试，并止住把它重试 5 遍的重试风暴。修的是「对话无限重复、会话卡死几十分钟到几小时、子会话被 18.4 分钟硬顶掐死」这条链路。",
+  "license": "MIT",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}
