@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" role="img" aria-label="推理循环守卫">
+  <!-- 意象：一圈打转的箭头（推理循环）被一道竖直的闸门切断。 -->
+  <defs>
+    <linearGradient id="lgRing" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c9cff"/>
+      <stop offset="1" stop-color="#4b6fe0"/>
+    </linearGradient>
+    <linearGradient id="lgGate" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8a5c"/>
+      <stop offset="1" stop-color="#e0503a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="1" y="1" width="30" height="30" rx="7" fill="#111827"/>
+
+  <!-- 循环箭头：一个缺口圆环 + 箭头 -->
+  <path
+    d="M16 5.5a10.5 10.5 0 1 1-7.42 3.08"
+    fill="none"
+    stroke="url(#lgRing)"
+    stroke-width="2.6"
+    stroke-linecap="round"
+  />
+  <path d="M6.4 5.2 8.9 9.2 4.2 9.9Z" fill="#7c9cff"/>
+
+  <!-- 闸门：切断循环 -->
+  <rect x="14.7" y="3" width="2.6" height="26" rx="1.3" fill="url(#lgGate)"/>
+  <rect x="11.2" y="9.4" width="9.6" height="2.2" rx="1.1" fill="url(#lgGate)"/>
+  <rect x="11.2" y="20.4" width="9.6" height="2.2" rx="1.1" fill="url(#lgGate)"/>
+</svg>

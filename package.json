@@ -1,0 +1,50 @@
+{
+  "name": "dsh-loop-guard",
+  "version": "0.5.1",
+  "private": true,
+  "description": "推理循环守卫：提前掐断模型「只出思考、不出结果」的死循环（分片洪水）、整条流卡死、慢慢渗流不出东西、以及输出退化重复，并止住把同一次失败重试 5 遍的风暴。",
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "dsh-plugin"
+  ],
+  "homepage": "https://github.com/zuaonew-ops/dsh-loop-guard#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zuaonew-ops/dsh-loop-guard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zuaonew-ops/dsh-loop-guard/issues"
+  },
+  "author": "zuaonew-ops",
+  "license": "MIT",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "docs",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": []
+    }
+  }
+}

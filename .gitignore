@@ -1,0 +1,26 @@
+# 依赖与构建产物
+node_modules/
+dist/
+build/
+
+# 日志与临时文件
+*.log
+npm-debug.log*
+*.tmp
+# 插件原子写盘的中间文件：<目标文件>.tmp-<pid>-<时间戳>（index.js:474；实际落在仓库外的 $DSH_HOME）
+*.tmp-*
+*.temp
+*~
+
+# 编辑器与系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# 环境变量与密钥（本插件不需要，但防止误提交）
+.env
+.env.*
+*.pem
+*.key
